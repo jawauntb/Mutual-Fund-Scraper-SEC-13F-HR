@@ -127,6 +127,7 @@ def get_complete_thirteen_f(path):
 
 
 def run_search(symbol):
+    print('searching for 13F-HR forms related to CIK/Ticker {}'.format(symbol))
     page = get_response_from_ticker(symbol)
     soup = BeautifulSoup(page.content, "lxml")
     no_match = "No matching CIK."
